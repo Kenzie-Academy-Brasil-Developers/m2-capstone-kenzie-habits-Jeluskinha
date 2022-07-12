@@ -1,0 +1,47 @@
+14352:3cec 23:24:45.498 KAVRemover tool version 1.0.2066
+14352:3cec 23:24:45.501 System language detected: langID=22, sublangID=1
+14352:3cec 23:24:45.503 User language detected: langID=22, sublangID=1
+14352:3cec 23:24:45.503 Setting UI language: langID=22, sublangID=0
+14352:3cec 23:24:45.504 Locale successfully set
+14352:3cec 23:24:45.508 dbghelp.dll dumped OK
+14352:3cec 23:24:46.822 Binary file dumped
+14352:3cec 23:24:47.244 ServiceHelper::WaitForServiceStatus
+14352:3cec 23:24:47.244 Still waiting for 4
+14352:3cec 23:24:48.255 Service start return code = 1
+14352:3cec 23:24:48.255 handle does init
+14352:3cec 23:24:48.257 Dumping user environment...
+14352:3cec 23:24:48.258 Dumping current environment...
+14352:3cec 23:24:48.258 CreateFileA () failed, error 3
+14352:3cec 23:24:48.258 Client malloc
+14352:3cec 23:24:48.259 Try to set user environment to server...
+14352:3cec 23:24:48.261 After call, error = 3, ret code = 0)
+14352:3cec 23:24:48.262 Client free
+14352:02b8 23:24:48.281 Searching for installed products...
+14352:02b8 23:24:48.282 Try to call some func on server...
+14352:02b8 23:24:48.399 Client malloc
+14352:02b8 23:24:48.400 After call, error = 0, ret code = 0)
+14352:02b8 23:24:48.401 Client free
+14352:02b8 23:24:48.401 Try to call detection...
+14352:02b8 23:24:48.777 Client malloc
+14352:02b8 23:24:48.777 After call detection, error = 0, ret code = 0)
+14352:02b8 23:24:48.777 Client free
+14352:02b8 23:24:48.777 Processing additional info...
+14352:02b8 23:24:48.778 Post message about detected products
+14352:3cec 23:25:13.378 Try to validate user input...
+14352:3cec 23:25:13.379 After call, error = 0, ret code = 0)
+14352:038c 23:25:13.380 Client malloc
+14352:038c 23:25:13.381 Client malloc
+14352:038c 23:25:13.381 Client malloc
+14352:038c 23:25:13.381 Client malloc
+14352:038c 23:25:13.381 Try to call removing...
+14352:038c 23:25:55.626 After call removing, error = 0, ret code = 0)
+14352:038c 23:25:55.627 Client free
+14352:038c 23:25:55.628 Client free
+14352:038c 23:25:55.628 Client free
+14352:038c 23:25:55.628 Client free
+14352:038c 23:25:55.628 Remove finished successfully
+14352:3cec 23:26:01.584 Try to restore system environment on server...
+14352:3cec 23:26:01.597 After call, error = 0, ret code = 0)
+14352:3cec 23:26:01.599 Current ServiceState is '4'
+14352:3cec 23:26:01.699 ServiceHelper::WaitForServiceStatus
+14352:3cec 23:26:01.699 Stopped, try to remove
