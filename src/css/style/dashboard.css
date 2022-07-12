@@ -1,0 +1,62 @@
+@import "reset.css";
+
+:root{
+    --brand1: #415AF3;
+    --brand2: #4150D2;
+    --brand3: #D7E4FB;
+    --gray1: #212529;
+    --gray2: #343A40;
+    --gray3: #ADB5BD;
+    --gray4: #E9ECEF;
+    --gray5: #F1F3F5;
+    --gray6: #F8F9FA;
+    --sucess: #56CF8E;
+    --error1: #E64445;
+    --error2: #F03839;
+    --font: Inter;
+    --titleSize1: 40px;
+    --titleSize2: 28px;
+    --titleSize3: 24px;
+    --titleSize4: 20px;
+    --titleSize5: 16px;
+    --textSize1: 18px;
+    --textSize2: 16px;
+    --textSize3: 14px;
+    --weigth1: 600;
+    --weigth2: 500;
+    --weigth3: 400;
+}
+
+.conteiner{
+    width: 100%;
+    height: 10%;
+}
+
+.titulo{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--gray6);
+}
+
+.titulo2{
+    width: 100%;
+    height: 5rem;
+    background-color: var(--brand1);
+}
+
+.textoKenzie{
+    color: var(--brand1);
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.nomeUsuario{
+color: #F8F9FA;
+font-family: Inter;
+font-size: 20px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+}
