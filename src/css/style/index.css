@@ -1,0 +1,224 @@
+:root{
+    --brand1: #415AF3;
+    --brand2: #4150D2;
+    --brand3: #D7E4FB;
+    --gray1: #212529;
+    --gray2: #343A40;
+    --gray3: #ADB5BD;
+    --gray4: #E9ECEF;
+    --gray5: #F1F3F5;
+    --gray6: #F8F9FA;
+    --sucess: #56CF8E;
+    --error1: #E64445;
+    --error2: #F03839;
+    --font: Inter;
+    --titleSize1: 40px;
+    --titleSize2: 28px;
+    --titleSize3: 24px;
+    --titleSize4: 20px;
+    --titleSize5: 16px;
+    --textSize1: 18px;
+    --textSize2: 16px;
+    --textSize3: 14px;
+    --weigth1: 600;
+    --weigth2: 500;
+    --weigth3: 400;
+}
+
+body{   
+    font-family: var(--font); 
+    display:flex;
+    min-height:100vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--brand3);
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--brand1);
+    padding: 80px 50px 0 50px;
+}
+.fraseDestaque{
+    display: flex;
+    font-size: var(--titleSize3);
+    font-weight: var(--weigth2);
+    color: var(--gray6);
+    padding: 50px 0 10px 0;
+    align-items: center;
+}
+.fraseSecundária{
+    display: flex;
+    font-size: var(--textSize2);
+    color: var(--gray6);
+    padding: 10px 0 30px 0;
+}
+.divform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 50px 0 50px;
+}
+.loginTitulo{
+    font-size: var(--titleSize4);
+    font-weight: var(--weigth1);
+    color: var(--gray1);
+    padding: 20px 0 20px 0;
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+.inputEmail{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+}
+.inputEmail label{
+    padding: 0 0 5px 0;
+}
+.inputEmail input{
+    height: 30px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: var(--gray6)
+}
+
+.inputEmail input:invalid{
+    border-color: var(--error1);
+}
+
+.inputSenha{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+}
+
+.inputSenha label{
+    padding: 0 0 5px 0;
+}
+
+.inputSenha input{
+    height: 30px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: var(--gray6)
+}
+
+.inputSenha input:invalid{
+    border-color: var(--error1);;
+}
+
+.btnLogin{
+    width: 100%;
+
+}
+
+.btnLogin button{
+    height: 40px;   
+    width: 100%;
+    border: var(--brand1);
+    border-radius: 5px;
+    background-color: var(--brand1);
+    color: var(--gray6);
+    font-weight: var(--weigth1)
+}
+
+
+  /*        */
+ /* Tablet */
+/*        */
+
+@media screen and (min-width: 680px) {
+     .container{
+        width: 100%;
+     }
+     .apresentacao{
+        padding: 80px 120px 0 120px;
+     }
+     .divform{
+        padding: 80px 120px 0 120px;
+     }
+     .fraseDestaque{
+        font-size: var(--titleSize1);
+     }
+     .fraseSecundária{
+        font-size: var(--textSize1);
+        padding: 10px 0 50px 0;
+     }
+     
+}
+
+
+  /*          */
+ /* Computer */
+/*          */
+
+@media screen and (min-width: 1024px) {
+    body{
+        height: 100%;
+        width: 100%;
+        background-color: var(--gray6)
+    }
+    .container{
+        width: 1080px;
+        display: flex;
+        flex-direction: row;
+        margin: 5% auto;
+        border-radius: 5px;
+        box-shadow: 0px 4px 40px -10px var(--gray1) ;
+    }
+     
+    .apresentacao{
+        height: 485px;
+        width: 540px;
+        border-radius: 5px 0 0 5px;
+        padding:0;
+    }
+
+    .apresentacao img{
+        padding: 80px 300px 30px 30px;
+    }
+
+    .fraseDestaque{
+        padding: 20px 40px 20px 30px;
+    }
+
+    .fraseSecundária{
+        padding: 10px 40px 20px 30px;
+    }
+    
+    .divform{
+        height: 485px;
+        width: 540px;
+        border-radius: 0 5px 5px 0;
+        padding:0;
+    }
+
+    .loginTitulo{
+        padding: 0 60px 20px 40px;
+    }
+    .loginForm{
+        padding: 0 60px 20px 40px;
+    }
+
+    .inputEmail input{
+        background-color: var(--gray4)
+    }
+
+    .inputSenha input{
+        background-color: var(--gray4)
+    }
+}
