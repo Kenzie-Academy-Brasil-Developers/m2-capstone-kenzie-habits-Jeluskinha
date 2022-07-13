@@ -188,6 +188,7 @@ tbody{
             height: 2rem;
         }
             .__tabela__cabecalho--status{
+                padding-right: 1rem;
                 width: fit-content;
                 font-weight: var(--weigth3);
             }
@@ -198,35 +199,82 @@ tbody{
             }
 
             .__tabela__cabecalho--descrição{
-                display: none;
-                width: 40%;
+                max-width: 30%;
             }
 
-            .__tabela__cabecalho--categoria{
-                display: none;
+            .__tabela__cabecalho--categoria{    
+                padding-right: 1rem;
                 width: fit-content;
                 overflow: hidden;
             }
             .__tabela__cabecalho--editar{
+                justify-content: center;
+                align-content: center;
                 width: fit-content;
                 font-weight: var(--weigth3);
             }
 
 
     .containerNav__tarefa__linha{
-        width: inherit;
-        height: 2rem;
+        width: fit-content;
+        border: var(--gray5) 5px;
+    }
+        .tarefa__cumprido--checkbox{
+            width: fit-content;
+        }
+        .tarefa__titulo{
+            padding-right: 1rem;
+            width: fit-content;
+        }
+            .tarefa__titulo--texto{
+
+            }
+        .tarefa__descricao{
+            padding-right: 1rem;
+            width: 40%;
+            white-space: nowrap;
+        }
+            .tarefa__titulo--texto{
+                width: fit-content;
+                white-space: nowrap;
+            }
+        .tarefa__categoria{
+            width: fit-content;
+        }
+            .tarefa__categoria--texto{
+
+            }
+
+        .tarefa__opcoes{
+            width: fit-content;
+        }
+            .tarefa__opcoes--botao{
+                background-color: transparent;
+                border: none;
+                font-size: var(--titleSize2);
+                color: var(--gray3);
+            }
+
+
+.modais{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 100;
+}
+
+
+@media (max-width: 768px){
+    .__tabela__cabecalho--descrição{
+        display: none;
+    }
+    .__tabela__cabecalho--categoria{
+        display: none;
     }
         .tarefa__descricao{
-           display: none;
+            display: none;
         }
-
         .tarefa__categoria{
             display: none;
         }
-
-        .modais{
-            display: flex;
-            flex-direction: column;
-            width: 100;
-        }
+}
