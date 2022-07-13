@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,23 @@
     <title>CAPSTONE M2</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style/dashboard.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <header>
         <div class="usuario">
-        
+
             <div class="usuario__header1">
                 <figure>
-                    <img class="usuario__header1__logo"src="../assets/img/KenzieHabitLogo2.png" alt="Kenzie habit logoTodos">
+                    <img class="usuario__header1__logo" src="../assets/img/KenzieHabitLogo2.png"
+                        alt="Kenzie habit logoTodos">
                 </figure>
 
                 <figure class="usuario__header1__userAvatar1--box">
@@ -33,7 +38,7 @@
                 </figure>
                 <div class="usuario__header2__descricao">
                     <h2 class="usuario__header2__nomeUsuario">Fulano da Silva</h2>
-                
+
                     <span class="usuario__header2__cargo">Kenzinho(a)</span>
                 </div>
             </div>
@@ -41,90 +46,89 @@
     </header>
 
     <main>
-        <div class="tabela">
+        <div class="containerNav">
             
-            <h2 class="tabela__Titulo">
-                Tarefas
-            </h2>
-            
-            <div class="tabela__botoes--div">
-                
-                <div class="tabela__botoes--modelo1">
-                    <a>
-                        Todos
-                    </a>
+            <div class="containerNav__boxButoons">
+                <div class="__boxButtons">
+                    <h2 class="__boxButtons--Titulo">
+                        Tarefas
+                    </h2>
                 </div>
-                
-                <div class="tabela__botoes--modelo1">
-                    <a>
-                        Concluído
-                    </a>
-                </div>
-
-                <div>
-                    <button class="tabela__botoes--modelo2">
+                <div class="__boxButtons__botoes--div">
+                    <div class="__boxButtons--Titulo--modelo1">
+                        <a>
+                            Todos
+                        </a>
+                    </div>
+                    <div class="__boxButtons--Titulo--modelo1">
+                        <a>
+                            Concluído
+                        </a>
+                    </div>
+                    <button class="__boxButtons--Titulo--modelo2">
                         Criar
                     </button>
                 </div>
             </div>
-            
-            <table class="tabela__cabecalho">
-                
-                <tr>
-                    <td class="tabela__cabecalho__normal1">Status</td>
-                    <td class="tabela__cabecalho__normal2">Título</td>
-                    <td class="tabela__cabecalho__mobileOculatar1">Descrição</td>
-                    <td class="tabela__cabecalho__mobileOculatar2">Categoria</td>
-                    <td class="tabela__cabecalho__coladoAoCanto">Editar</td>
-                </tr>
-                
+
+
+            <table class="containerNav__tabela">
+                    <tr class="__tabela__cabecalho__linha">
+                        <td class="__tabela__cabecalho--status">Status</td>
+                        <td class="__tabela__cabecalho--titulo">Título</td>
+                        <td class="__tabela__cabecalho--descrição">Descrição</td>
+                        <td class="__tabela__cabecalho--categoria">Categoria</td>
+                        <td class="__tabela__cabecalho--editar">Editar</td>
+                    </tr>
+                </div>
+
                 <!-- inserir tarefas com DOM aqui <tr> para linha <td> para colunas -->
                 <!-- EXEMPLO: -->
+                
+                    <tr class="containerNav__tarefa__linha" id="">
+                        <td class="tarefa__cumprido--checkbox">
+                            <input type="checkbox" class="tarefa__cumprido--check" />
+                        </td>
 
-                <tr class="tarefa">
-                    <td class="tarefa__cumprido--checkbox">  
-                        <input type="checkbox" class="tarefa__cumprido--check"/>
-                    </td>
-                    
-                    <td class="tarefa__titulo">
-                        <p class="tarefa__titulo--texto">
-                            Titulo de tarefa pra fazer
-                        </p>
-                    </td>
+                        <td class="tarefa__titulo">
+                            <p class="tarefa__titulo--texto">
+                                Titulo de tarefa pra fazer
+                            </p>
+                        </td>
 
-                    <td class="tarefa__descricao">
-                        <p class="tarefa__descricao--texto">
-                            Descrição da tarefa que a pessoa tem que desenvolver
-                        </p>
-                    </td>
+                        <td class="tarefa__descricao">
+                            <p class="tarefa__descricao--texto">
+                                Descrição da tarefa que a pessoa tem que desenvolver
+                            </p>
+                        </td>
 
-                    <td class="tarefa__categoria">
-                        <span class="tarefa__categoria--box">
-                            Trabalho
-                        </span>
-                    </td>
+                        <td class="tarefa__categoria">
+                            <span class="tarefa__categoria--box">
+                                Trabalho
+                            </span>
+                        </td>
 
-                    <td class="tarefa__opcoes">
-                        <button class="tarefa__opcoes--botao">...</button>
-                    </td>
-                    
+                        <td class="tarefa__opcoes">
+                            <button class="tarefa__opcoes--botao">...</button>
+                        </td>
+               
                 </tr>
                 <!-- // -->
             </table>
         </div>
     </main>
-    <footer>
+    <!-- <footer>
         <Button>
             Ver mais
         </Button>
-    </footer>
-</body>
+    </footer> -->
 
-    <!-- <script src=""></script> -->
-    <!-- MODAIS: -->
-    <div class="modais">
-        <!-- modal CRIAR HABITO-->
-        <div class="modal">
+
+<!-- <script src=""></script> -->
+<!-- MODAIS: -->
+<!-- <div class="modais"> -->
+<!-- modal CRIAR HABITO-->
+<!-- <div class="modal">
             <div class="container">
                 <div class="modal__inner">
                     <button class="modal__close">X</button>
@@ -150,10 +154,10 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- modal EDITAR HABITO-->
-        <div class="modal">
+<!-- modal EDITAR HABITO-->
+<!-- <div class="modal">
             <div class="container">
                 <div class="modal__inner">
                     <button class="modal__close">X</button>
@@ -183,10 +187,10 @@
                     </form>
                 </div>
             </div>
-        </div>
-        
-        <!-- modal Editar perfil-->
-        <div class="modal">
+        </div> -->
+
+<!-- modal Editar perfil-->
+<!-- <div class="modal">
             <div class="container">
                 <div class="modal__inner">
                     <button class="modal__close">X</button>
@@ -202,10 +206,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-        <!-- modal -->
-        <div class="modal">
+    </div> -->
+
+<!-- modal -->
+<!-- <div class="modal">
             <div class="container">
                 <div class="modal__inner">
                     <button class="modal__close">X</button>
@@ -218,9 +222,10 @@
                 </div>
             </div>
         </div>
-    </div>
 
+    </div> -->
 
 
 <script type="module" src="../scripts/dashboard.script.js"></script>
+</body>
 </html>
