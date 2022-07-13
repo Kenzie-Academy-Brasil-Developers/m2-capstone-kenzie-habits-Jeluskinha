@@ -1,7 +1,12 @@
 import Habits from "../models/dom.models.js";
 import Requests from "../controller/request.controller.js"
+import Modal from "../models/modal.models.js";
 
 Habits.adicionarLista()
+
+Modal.clicarCriar()
+Modal.clicarEditarHabito()
+Modal.clicarExcluir()
 
 
 const formCriarHabito = Document.querySelector("#modal__form__CriarHabito")
