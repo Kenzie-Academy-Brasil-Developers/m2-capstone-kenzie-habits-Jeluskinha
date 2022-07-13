@@ -11,9 +11,9 @@ export default class Habits{
        
         lista.forEach((item) => {
     
-            console.log(item);
              //criar elementos lista de tarefas
             const linhaTabela = document.createElement("tr")
+            linhaTabela.id = item.habit_id
             const celulaCheckbox = document.createElement("td")
             const check = document.createElement("input")
             const celulaTitulo = document.createElement("td")

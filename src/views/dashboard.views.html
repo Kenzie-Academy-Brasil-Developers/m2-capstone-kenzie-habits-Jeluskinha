@@ -123,107 +123,107 @@
         </Button>
     </footer> -->
 
-
-<!-- <script src=""></script> -->
-<!-- MODAIS: -->
-<!-- <div class="modais"> -->
-<!-- modal CRIAR HABITO-->
-<!-- <div class="modal">
+        <!-- MODAIS: -->
+    <div class="modais">
+        <!-- modal CRIAR HABITO-->
+        <div class="modal" id="modal__CriarHabito">
             <div class="container">
                 <div class="modal__inner">
                     <button class="modal__close">X</button>
                         <h2>Criar hábito</h2>
-                    <form class="modal__form">
-                        <label>Título</label>
-                        <input type="text" name="titulo" placeholder="Insira um Título">
-
-                        <label>Descrição</label>
-                        <input type="text" name="descricao" placeholder="Insira uma descrição">
-
-                        <div class="dropdown">
-                            <button class="dropbtn">Categoria</button>
-                            <div class="dropdown-content">
-                            <a href="#">Trabalho</a>
-                            <a href="#">Estudo</a>
-                            <a href="#">Lazer</a>
-                            <a href="#">Saúde</a>
-                            </div>
-                          </div>
-
-                        <button class="button__modal" type="submit">Inserir</button>
-                    </form>
-                </div>
-            </div>
-        </div> -->
-
-<!-- modal EDITAR HABITO-->
-<!-- <div class="modal">
-            <div class="container">
-                <div class="modal__inner">
-                    <button class="modal__close">X</button>
-                        <h2>Editar hábito</h2>
-                    <form class="modal__form">
-                        <label>Título</label>
-                        <input type="text" name="titulo" value="TITULO ANTERIOR">
-
-                        <label>Descrição</label>
-                        <input type="text" name="descricao" value="DESCRIÇÃO ANTERIOR">
-
-                        <div class="dropdown">
-                            <button class="dropbtn">Categoria</button>
-                            <div class="dropdown-content">
-                            <a href="#">Trabalho</a>
-                            <a href="#">Estudo</a>
-                            <a href="#">Lazer</a>
-                            <a href="#">Saúde</a>
-                            </div>
-                        </div>
-                            <span>Status</span>
-                            <input type="checkbox" class="form-check-input"/>
-                        <div>
-
+                        <form class="modal__form" id="modal__form__CriarHabito">
+                        <label for="habit_title">Título</label>
+                        <input type="text" name="habit_title" placeholder="Insira um Título">
+                        <label for="habit_description">Descrição</label>
+                        <input type="text" name="habit_description" placeholder="Insira uma descrição">
+                        <label for="habit_category" class="">Categoria</label>
+                        <select name="habit_category">
+                            <option>Selecionar Categoria</option>
+                            <option>lazer</option>
+                            <option>Saude</option>
+                            <option>estudos</option>
+                            <option>casa</option>
+                            <option>trabalho</option>
+                        </select>
+                        <div class="btnOptionsModal">
                         <button class="button__modal" type="submit">Excluir</button>
-                        <button class="button__modal" type="submit">Salvar alterações</button>
-                    </form>
-                </div>
-            </div>
-        </div> -->
-
-<!-- modal Editar perfil-->
-<!-- <div class="modal">
-            <div class="container">
-                <div class="modal__inner">
-                    <button class="modal__close">X</button>
-                        <h2>Editar perfil</h2>
-                    <form class="modal__form">
-                        <label>Nome</label>
-                        <input type="text" name="nom" value="TITULO ANTERIOR">
-
-                        <label>Url da imagem do perfil</label>
-                        <input type="url" name="urlAvatar" value="DESCRIÇÃO ANTERIOR">
-                        <button class="button__modal" type="submit">Salvar alterações</button>
+                        <button class="button__Salvar" id="submit__inserirHabito" type="submit">Salvar Alterações</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div> -->
-
-<!-- modal -->
-<!-- <div class="modal">
-            <div class="container">
-                <div class="modal__inner">
-                    <button class="modal__close">X</button>
-                        <h2>Login</h2>
-                    <form class="modal__form">
-                        <input type="email" name="email" id="email" placeholder="E-mail">
-                        <input type="password" name="password" id="password" placeholder="Senha">
-                        <button class="button__modal" type="submit">Entrar</button>
-                    </form>
+    
+        <!-- modal EDITAR HABITO-->
+        <div class="modal"  id="modal__editarHabito">
+                <div class="container">
+                    <div class="modal__inner">
+                        <button class="modal__close">X</button>
+                            <h2>Editar hábito</h2>
+                        <form class="modal__form" id="modal__form__editarHabito">
+    
+                            <label for="habit_title">Título</label>
+                            <input type="text" name="habit_title" placeholder="Insira um Título">
+    
+                            <label for="habit_description">Descrição</label>
+                            <input type="text" name="habit_description" placeholder="Insira uma descrição">
+    
+                            <label for="habit_category" class="">Categoria</label>
+                                <select name="habit_category">
+                                    <option>Selecionar Categoria</option>
+                                    <option>lazer</option>
+                                    <option>Saude</option>
+                                    <option>estudos</option>
+                                    <option>casa</option>
+                                    <option>trabalho</option>
+                                </select>
+                            </div>
+                                <span>Status</span>
+                                <input type="checkbox" class="form-check-input"/>
+                            <div>
+    
+                            <button class="button__modal" id="submit__excluirEdicao" type="submit">Excluir</button>
+                            <button class="button__modal" id="submit__salvarEdit" type="submit">Salvar alterações</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        <!-- modal Editar perfil-->
+        <div class="modal"  id="modal__editarPerfil">
+                <div class="container">
+                    <div class="modal__inner">
+                        <button class="modal__close">X</button>
+                            <h2>Editar perfil</h2>
+                        <form class="modal__form" id="modal__form__editarPerfil">
+                            <label for="usr_name">Nome</label>
+                            <input type="text" name="usr_name" >
+    
+                            <label for="usr_image">Url da imagem do perfil</label>
+                            <input type="url" name="usr_image">
+    
+                            <button class="button__modal" id="submit__edicaoPerfil" type="submit">Salvar alterações</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div> -->
+    
+        <!-- modal Excluir Habito -->
+        <div class="modal" id="modal__excluirHabito">
+                <div class="container">
+                    <div class="modal__inner">
+                        <button class="modal__close">X</button>
+                            <h2>Excluir habito</h2>
+                                <h2>Tem certeza que deseja excluir este hábito?</h2>
+                                <p>Após a exclusão não é possível desfazer.</p>
+                                <button class="button__modal" id="submit__cacelarDelete" type="submit">Cancelar</button>
+                                <button class="button__modal" id="submit__deletarTarefa" type="submit">Sim, excluir tarefa</button>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
 
 
 <script type="module" src="../scripts/dashboard.script.js"></script>
