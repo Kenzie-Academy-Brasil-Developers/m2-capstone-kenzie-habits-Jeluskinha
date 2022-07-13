@@ -13,7 +13,7 @@ async function login(e){
 
     
     await Requests.login(formDataObj)
-}
+
     const responseResultado = await Requests.login(formDataObj)
     
     window.location.href = "./src/views/dashboard.views.html"
