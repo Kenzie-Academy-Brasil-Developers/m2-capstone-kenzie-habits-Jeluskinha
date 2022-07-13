@@ -13,5 +13,4 @@ async function login(e){
     console.log(formDataObj)
     
     await Requests.login(formDataObj)
-    
 }

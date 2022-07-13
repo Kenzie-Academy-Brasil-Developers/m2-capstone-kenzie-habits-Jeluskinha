@@ -1,0 +1,109 @@
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.modal > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+.modal__inner{
+    position: relative;
+    background-color: rgb(31,32,36);
+    width: 80vw;
+    height: 50vh;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 40px;
+}
+
+@media (min-width: 580px){
+    .modal__inner{
+        position: relative;
+        background-color: rgb(31,32,36);
+        width: 32rem;
+        max-width: 100%;
+        height: 30rem;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+        gap: 40px;
+    }
+}
+
+.modal__form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#email{
+    width: 80%;
+}
+#password{
+    width: 80%;
+}
+.modal__inner > h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.modal__inner > p {
+    width: 80%;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.modal__inner > p > a{
+    color: cyan;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+}
+.modal__inner > p > a:hover{
+    color: cornflowerblue;
+}
+.modal__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    color: white;
+    border:none;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+.button__modal{
+    width: 85%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    padding: 10px;
+    background-color: rgb(15,107,255);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.button__modal:hover{
+    color: black;
+    background-color: cyan;
+    border: 1px solid cyan;
+}
