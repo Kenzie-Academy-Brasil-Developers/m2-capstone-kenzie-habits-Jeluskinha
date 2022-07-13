@@ -12,9 +12,12 @@ async function login(e){
     //fData.forEach((value, key) => (formDataObj[key] = value))
     //console.log(formDataObj)
     
+    await Requests.login(formDataObj)
+}
     const responseResultado = await Requests.login(formDataObj)
     console.log(responseResultado)
     
 }
 
 login()
+
