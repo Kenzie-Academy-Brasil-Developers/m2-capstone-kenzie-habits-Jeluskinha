@@ -33,13 +33,11 @@ body {
     font-family: var(--font);
     width: 100%;
     height: 100%;
-    
 }
 .usuario{
     width: 100%;
     height: 10%;
 }
-
 .usuario__header1{
     padding:20px;
     display: flex;
@@ -47,21 +45,16 @@ body {
     width: 100%;
     background-color: var(--gray6);
     justify-content: space-between;
-    align-items: center;   
-    
+    align-items: center;
 }
-
 .usuario__header1__logo{
     width: 131px;
-
 }
-
 .usuario__header1__userAvatar1--box{
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
-
 .usuario__header1__userAvatar1{
     height: 40px;
     width: 40px;
@@ -69,7 +62,6 @@ body {
     border-radius: 50%;
     background-color: var(--brand1);
 }
-
 .usuario__header2{
     display: flex;
     padding:20px;
@@ -79,13 +71,11 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .usuario__header2__userAvatar2--box{
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
-
 .usuario__header2__userAvatar2{
     height: 60px;
     width: 60px;
@@ -93,7 +83,6 @@ body {
     border-radius: 50%;
     background-color: var(--brand3);
 }
-
 .usuario__header2__descricao{
     padding:20px;
     width: 100%;
@@ -108,8 +97,6 @@ body {
     font-size: var(--textSize3);
     color: var(--gray5);
 }
-
-
 main{
     height: 80%;
     flex-grow: 1;
@@ -121,7 +108,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}   
+}
     .containerNav__boxButoons{
         margin-top: 2rem;
         width: 80%;
@@ -136,39 +123,36 @@ main{
             align-items: center;
         }
             .__boxButtons--Titulo{
-                
                 font-family: var(--font);
                 font-size: var(--textSize3);
                 font-weight: var(--weigth1);
             }
-
         .__boxButtons__botoes--div{
             width: 50%;
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
-            padding-right: 2rem;
+            gap: 1rem;
         }
-        .__boxButtons--Titulo--modelo1{
-            font-family: var(--font);
-            padding: 8px 0 0 0;
-            font-size: var(--textSize3);
-            color: var(--gray1);
-            font-weight: var(--weigth3);
-            width: 80px;
-            height: 32px;
+            .__boxButtons--Titulo--modelo1{
+                font-family: var(--font);
+                padding: 8px 0 0 0;
+                font-size: var(--textSize3);
+                color: var(--gray1);
+                font-weight: var(--weigth3);
+                width: 5rem;
+                height: 32px;
+            }
+            .__boxButtons--Titulo--modelo2{
+                width: 5rem;
+                height: 32px;
+                border: var(--brand1);
+                border-radius: 5px;
+                background-color: var(--brand1);
+                color: var(--gray6);
+                font-weight: var(--weigth3);
         }
-        .__boxButtons--Titulo--modelo2{
-            width: 90px;
-            height: 32px;
-            border: var(--brand1);
-            border-radius: 5px;
-            background-color: var(--brand1);
-            color: var(--gray6);
-            font-weight: var(--weigth3);
-        }
-
 .containerNav__tabela{
+    height: 23rem;
     width: 80%;
     background-color: transparent;
     font-family: var(--font);
@@ -179,8 +163,6 @@ tbody{
     width: 100%;
 }
     .__tabela__cabecalho__box{
- 
-     
         background-color: red;
     }
         .__tabela__cabecalho__linha{
@@ -192,12 +174,10 @@ tbody{
                 width: fit-content;
                 font-weight: var(--weigth3);
             }
-
             .__tabela__cabecalho--titulo2{
                 width: fit-content;
                 font-weight: var(--weigth3);
             }
-
             .__tabela__cabecalho--descrição{
                 max-width: 30%;
             }
@@ -213,8 +193,6 @@ tbody{
                 width: fit-content;
                 font-weight: var(--weigth3);
             }
-
-
     .containerNav__tarefa__linha{
         width: fit-content;
         border: var(--gray5) 5px;
@@ -238,43 +216,14 @@ tbody{
                 width: fit-content;
                 white-space: nowrap;
             }
+
         .tarefa__categoria{
             width: fit-content;
         }
             .tarefa__categoria--texto{
-
             }
-
         .tarefa__opcoes{
             width: fit-content;
         }
-            .tarefa__opcoes--botao{
-                background-color: transparent;
-                border: none;
-                font-size: var(--titleSize2);
-                color: var(--gray3);
-            }
 
-
-.modais{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    width: 100;
-}
-
-
-@media (max-width: 768px){
-    .__tabela__cabecalho--descrição{
-        display: none;
-    }
-    .__tabela__cabecalho--categoria{
-        display: none;
-    }
-        .tarefa__descricao{
-            display: none;
-        }
-        .tarefa__categoria{
-            display: none;
-        }
 }
