@@ -40,6 +40,7 @@ main{
     justify-content: center;
     align-items: center;
 }
+
 .container{
     display: flex;
     flex-direction: column;
@@ -168,10 +169,16 @@ main{
 
 @media screen and (min-width: 1024px) {
     body{
+        justify-content: center;
         height: 100%;
         width: 100%;
         background-color: var(--gray6)
     }
+
+    main{
+        flex-grow: unset;
+    }
+
     .container{
         width: 1080px;
         display: flex;

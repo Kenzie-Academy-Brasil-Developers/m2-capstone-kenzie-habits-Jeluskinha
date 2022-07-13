@@ -156,7 +156,7 @@ const base_url = `https://habits-kenzie.herokuapp.com/api/habits/category/${cate
 // Requests.createHabit(criarHabito)
 
       //*****readAll  --OK
-console.log(Requests.readAll())
+// console.log(Requests.readAll())
 
       //*****readByCategory  --OK
 // Requests.readByCategory()
