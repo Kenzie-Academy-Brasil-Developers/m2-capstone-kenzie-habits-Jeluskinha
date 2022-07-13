@@ -1,3 +1,3 @@
-import Requests from "../controller/request.controller.js";
+import Habits from "../models/dom.models.js";
 
-Requests.readAll()
+Habits.adicionarLista()
