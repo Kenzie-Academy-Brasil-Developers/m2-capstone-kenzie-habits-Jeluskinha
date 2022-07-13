@@ -60,17 +60,17 @@ export default class Requests {
   static async readAll() { 
     const base_url = "https://habits-kenzie.herokuapp.com/api/habits"
 
-    fetch(base_url,
+    const response = await fetch(base_url,
       {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${this.token}`
         },
       })
-      .then(res => res.json())
-      .then(res => console.log(res))
-      .then(res => res)
-      .catch(err => console.log(err))
+
+     const data = await response.json()
+
+    return data
   }
   static async readByCategory(categoria) {
 const base_url = `https://habits-kenzie.herokuapp.com/api/habits/category/${categoria}`
@@ -139,6 +139,7 @@ const base_url = `https://habits-kenzie.herokuapp.com/api/habits/category/${cate
     return response
   }
 }
+
     // *****teste updateProfile  --OK
 // const imagemUsuarioURL = {  
 //   usr_image: "https://www.google.com/images/Kammer"
