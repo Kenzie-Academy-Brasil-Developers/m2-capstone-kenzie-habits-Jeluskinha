@@ -8,23 +8,213 @@
     <link rel="stylesheet" type="text/html" href="/src/css/style/dashboard.css">
     <link rel="stylesheet" type="text/html" href="/src/css/reset.css">
     <link rel="stylesheet" type="text/html" href="/src/css/style/index.css">
+
 </head>
 <body>
 
-    <header class="conteiner">
-    
-        <div class="titulo">
-            <h1 class="textoKenzie">KenzieHabit</h1>
-          <img src="/src/assets/img/user.png" alt="">
-        </div>
+    <header>
+        <div class="usuario">
+        
+            <div class="usuario__header1">
+                <figure>
+                    <img class="usuario__header1__logo"src="../assets/img/KenzieHabitLogo2.png" alt="Kenzie habit logoTodos">
+                </figure>
 
-        <div class="titulo2">
-            <img src="/src/assets/img/user.png" alt="">
-            <h2 class="nomeUsuario">Júlia Silva Camargo</h2>
+                <figure class="usuario__header1__userAvatar1--box">
+                    <img class="usuario__header1__userAvatar1" src="/src/assets/img/user.png" alt="imagem do usuário">
+                </figure>
+            </div>
+
+            <div class="usuario__header2">
+                <figure class="usuario__header2__userAvatar2--box">
+                    <img class="usuario__header2__userAvatar2" src="/src/assets/img/user.png" alt="imagem do usuário">
+                </figure>
+                <div class="usuario__header2__descricao">
+                    <h2 class="usuario__header2__nomeUsuario">Fulano da Silva</h2>
+                
+                    <span class="usuario__header2__cargo">Kenzinho(a)</span>
+                </div>
+            </div>
         </div>
-    
     </header>
 
-    <script src="/src/scripts/dashboard.script.js"></script>
+    <main>
+        <div class="tabela">
+            
+            <h2 class="tabela__Titulo">
+                Tarefas
+            </h2>
+            
+            <div class="tabela__botoes--div">
+                
+                <div class="tabela__botoes--modelo1">
+                    <a>
+                        Todos
+                    </a>
+                </div>
+                
+                <div class="tabela__botoes--modelo1">
+                    <a>
+                        Concluído
+                    </a>
+                </div>
+
+                <div>
+                    <button class="tabela__botoes--modelo2">
+                        Criar
+                    </button>
+                </div>
+            </div>
+            
+            <table class="tabela__cabecalho">
+                
+                <tr>
+                    <td class="tabela__cabecalho__normal1">Status</td>
+                    <td class="tabela__cabecalho__normal2">Título</td>
+                    <td class="tabela__cabecalho__mobileOculatar1">Descrição</td>
+                    <td class="tabela__cabecalho__mobileOculatar2">Categoria</td>
+                    <td class="tabela__cabecalho__coladoAoCanto">Editar</td>
+                </tr>
+                
+                <!-- inserir tarefas com DOM aqui <tr> para linha <td> para colunas -->
+                <!-- EXEMPLO: -->
+
+                <tr class="tarefa">
+                    <td class="tarefa__cumprido--checkbox">  
+                        <input type="checkbox" class="tarefa__cumprido--check"/>
+                    </td>
+                    
+                    <td class="tarefa__titulo">
+                        <p class="tarefa__titulo--texto">
+                            Titulo de tarefa pra fazer
+                        </p>
+                    </td>
+
+                    <td class="tarefa__descricao">
+                        <p class="tarefa__descricao--texto">
+                            Descrição da tarefa que a pessoa tem que desenvolver
+                        </p>
+                    </td>
+
+                    <td class="tarefa__categoria">
+                        <span class="tarefa__categoria--box">
+                            Trabalho
+                        </span>
+                    </td>
+
+                    <td class="tarefa__opcoes">
+                        <button class="tarefa__opcoes--botao">...</button>
+                    </td>
+                    
+                </tr>
+                <!-- // -->
+            </table>
+        </div>
+    </main>
+    <footer>
+        <Button>
+            Ver mais
+        </Button>
+    </footer>
 </body>
+
+    <!-- <script src=""></script> -->
+    <!-- MODAIS: -->
+    <div class="modais">
+        <!-- modal CRIAR HABITO-->
+        <div class="modal">
+            <div class="container">
+                <div class="modal__inner">
+                    <button class="modal__close">X</button>
+                        <h2>Criar hábito</h2>
+                    <form class="modal__form">
+                        <label>Título</label>
+                        <input type="text" name="titulo" placeholder="Insira um Título">
+
+                        <label>Descrição</label>
+                        <input type="text" name="descricao" placeholder="Insira uma descrição">
+
+                        <div class="dropdown">
+                            <button class="dropbtn">Categoria</button>
+                            <div class="dropdown-content">
+                            <a href="#">Trabalho</a>
+                            <a href="#">Estudo</a>
+                            <a href="#">Lazer</a>
+                            <a href="#">Saúde</a>
+                            </div>
+                          </div>
+
+                        <button class="button__modal" type="submit">Inserir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal EDITAR HABITO-->
+        <div class="modal">
+            <div class="container">
+                <div class="modal__inner">
+                    <button class="modal__close">X</button>
+                        <h2>Editar hábito</h2>
+                    <form class="modal__form">
+                        <label>Título</label>
+                        <input type="text" name="titulo" value="TITULO ANTERIOR">
+
+                        <label>Descrição</label>
+                        <input type="text" name="descricao" value="DESCRIÇÃO ANTERIOR">
+
+                        <div class="dropdown">
+                            <button class="dropbtn">Categoria</button>
+                            <div class="dropdown-content">
+                            <a href="#">Trabalho</a>
+                            <a href="#">Estudo</a>
+                            <a href="#">Lazer</a>
+                            <a href="#">Saúde</a>
+                            </div>
+                        </div>
+                            <span>Status</span>
+                            <input type="checkbox" class="form-check-input"/>
+                        <div>
+
+                        <button class="button__modal" type="submit">Excluir</button>
+                        <button class="button__modal" type="submit">Salvar alterações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- modal Editar perfil-->
+        <div class="modal">
+            <div class="container">
+                <div class="modal__inner">
+                    <button class="modal__close">X</button>
+                        <h2>Editar perfil</h2>
+                    <form class="modal__form">
+                        <label>Nome</label>
+                        <input type="text" name="nom" value="TITULO ANTERIOR">
+
+                        <label>Url da imagem do perfil</label>
+                        <input type="url" name="urlAvatar" value="DESCRIÇÃO ANTERIOR">
+                        <button class="button__modal" type="submit">Salvar alterações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- modal -->
+        <div class="modal">
+            <div class="container">
+                <div class="modal__inner">
+                    <button class="modal__close">X</button>
+                        <h2>Login</h2>
+                    <form class="modal__form">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                        <input type="password" name="password" id="password" placeholder="Senha">
+                        <button class="button__modal" type="submit">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </html>
