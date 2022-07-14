@@ -10,7 +10,7 @@ export default class Habits{
         //selecionar html
         const tabela = document.querySelector(".containerNav__tabela")
        
-        const itensHabitos = await lista.forEach((item) => {
+        lista.forEach((item) => {
     
              //criar elementos lista de tarefas
             const linhaTabela = document.createElement("tr")
@@ -59,11 +59,10 @@ export default class Habits{
                               tabelaOpcoes,
                               )
             tabela.append(linhaTabela)
-            tabela.innerHTML = ""
-            return tabela
+    
+    
         })
-
-        return itensHabitos
+     
      }
 }
 

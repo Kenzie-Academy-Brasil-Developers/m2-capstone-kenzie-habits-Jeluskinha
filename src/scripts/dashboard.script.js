@@ -6,7 +6,7 @@ Habits.adicionarLista()
 
 Modal.clicarCriar()
 Modal.clicarEditarHabito()
-Modal.clicarExcluir()
+//Modal.clicarExcluir()
 
 
 const formCriarHabito = document.querySelector("#modal__form__CriarHabito")
@@ -25,7 +25,7 @@ formCriarHabito.addEventListener('submit', criarHabito)
 
 ////////
 
-const formEditarHabito = document.querySelector("#modal__form__editarHabito")
+const formEditarHabito = document.querySelector("#modal__editarHabito")
 
 async function editarHabito(e){
     e.preventDefault()
