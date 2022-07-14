@@ -8,6 +8,12 @@ Modal.clicarCriar()
 Modal.clicarEditarHabito()
 Modal.clicarExcluir()
 
+const botaoLogout = document.querySelector(".button__logout")
+function logout() {
+    localStorage.clear()
+    window.location.href = "/"
+}
+botaoLogout.addEventListener("click", logout)
 
 const formCriarHabito = document.querySelector("#modal__form__CriarHabito")
 
