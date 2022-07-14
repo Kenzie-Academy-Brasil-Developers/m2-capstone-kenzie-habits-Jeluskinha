@@ -210,9 +210,9 @@ tbody{
             padding-right: 1rem;
             width: fit-content;
         }
-            .tarefa__titulo--texto{
+            /* .tarefa__titulo--texto{
 
-            }
+            } */
         .tarefa__descricao{
             padding-right: 1rem;
             width: 40%;
@@ -226,8 +226,8 @@ tbody{
         .tarefa__categoria{
             width: fit-content;
         }
-            .tarefa__categoria--texto{
-            }
+            /* .tarefa__categoria--texto{
+            } */
         .tarefa__opcoes{
             width: fit-content;
         }
@@ -443,6 +443,7 @@ footer{
                 font-weight: 600;
                 display: flex;
                 justify-content: flex-start;
+
 
             }
                 .modal__form{
@@ -753,3 +754,4 @@ footer{
         justify-content: center;    
     }
 }
+

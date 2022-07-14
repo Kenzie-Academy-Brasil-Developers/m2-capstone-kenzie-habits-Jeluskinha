@@ -1,10 +1,16 @@
 import Habits from "../models/dom.models.js";
 import Requests from "../controller/request.controller.js"
+import Modal from "../models/modal.models.js";
 
 Habits.adicionarLista()
 
+Modal.clicarCriar()
+Modal.clicarEditarHabito()
+Modal.clicarExcluir()
 
-const formCriarHabito = Document.querySelector("#modal__form__CriarHabito")
+
+const formCriarHabito = document.querySelector("#modal__form__CriarHabito")
+
 async function criarHabito(e){
     e.preventDefault()
     
@@ -12,33 +18,34 @@ async function criarHabito(e){
     const formDataObj          =  {}
     fData.forEach((value, key) => (formDataObj[key] = value))
 
-    
-    await Requests.criarHabito(formDataObj)
-
-    const responseResultado = await Requests.createHabit(formDataObj)
+    const novoHabito = await Requests.createHabit(formDataObj)
+    return novoHabito.habit_id
 }
 formCriarHabito.addEventListener('submit', criarHabito)
 
 ////////
 
-const formEditarHabito = Document.querySelector("#modal__form__editarHabito")
+const formEditarHabito = document.querySelector("#modal__form__editarHabito")
+
 async function editarHabito(e){
     e.preventDefault()
     
     const fData                =  new FormData(e.target)
     const formDataObj          =  {}
     fData.forEach((value, key) => (formDataObj[key] = value))
+    console.log(formDataObj);
 
-    
-    await Requests.updateHabit(formDataObj)
+    const criarId = await criarHabito(e)
 
-    const responseResultado = await Requests.updateHabit(formDataObj)
+    const editado = await Requests.updateHabit(formDataObj, criarId)
+    console.log(editado);
 }
 formEditarHabito.addEventListener('submit', editarHabito)
 
 ////////
 
-const formMudarPefil = Document.querySelector("#modal__form__editarPerfil")
+const formMudarPefil = document.querySelector("#modal__form__editarPerfil")
+
 async function mudarPefil(e){
     e.preventDefault()
     
@@ -46,10 +53,30 @@ async function mudarPefil(e){
     const formDataObj          =  {}
     fData.forEach((value, key) => (formDataObj[key] = value))
 
-    
-    await Requests.updateProfile(formDataObj)
-
     const responseResultado = await Requests.updateProfile(formDataObj)
+
+    const avatar1 = document.querySelector(".usuario__header1__userAvatar1")
+    const avatar2 = document.querySelector(".usuario__header2__userAvatar2")
+    const nomeUsuario = document.querySelector(".usuario__header2__nomeUsuario")
+    avatar1.src = responseResultado.usr_image
+    avatar2.src = responseResultado.usr_image
+    nomeUsuario.innerText = responseResultado.usr_name
 }
 formMudarPefil.addEventListener('submit', mudarPefil)
 
+
+//FALTA FINALIZAR
+
+// const checkCumprido = document.querySelector(".tarefa__cumprido--check")
+
+// async function check(e){
+//     e.preventDefault()
+
+//    if(e.target.checked){
+
+//     const complete = await Requests.completeHabit(id)
+//     console.log(complete);
+//    }
+
+// }
+// checkCumprido.addEventListener('change', check)
