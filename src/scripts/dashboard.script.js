@@ -1,6 +1,7 @@
 import Habits from "../models/dom.models.js";
 import Requests from "../controller/request.controller.js"
 import Modal from "../models/modal.models.js";
+import Filtros from "../models/filtros.models.js";
 
 Habits.adicionarLista()
 
@@ -8,8 +9,11 @@ Modal.clicarCriar()
 Modal.clicarEditarHabito()
 Modal.clicarExcluir()
 
+Filtros.filtrarTodos()
+Filtros.filtrarConcluidos()
 
-const formCriarHabito = Document.querySelector("#modal__form__CriarHabito")
+
+const formCriarHabito = document.querySelector("#modal__form__CriarHabito")
 async function criarHabito(e){
     e.preventDefault()
     
@@ -26,7 +30,7 @@ formCriarHabito.addEventListener('submit', criarHabito)
 
 ////////
 
-const formEditarHabito = Document.querySelector("#modal__form__editarHabito")
+const formEditarHabito = document.querySelector("#modal__form__editarHabito")
 async function editarHabito(e){
     e.preventDefault()
     
@@ -43,7 +47,7 @@ formEditarHabito.addEventListener('submit', editarHabito)
 
 ////////
 
-const formMudarPefil = Document.querySelector("#modal__form__editarPerfil")
+const formMudarPefil = document.querySelector("#modal__form__editarPerfil")
 async function mudarPefil(e){
     e.preventDefault()
     
