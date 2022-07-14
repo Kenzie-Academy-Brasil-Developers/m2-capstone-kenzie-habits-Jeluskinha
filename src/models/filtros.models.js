@@ -1,24 +1,28 @@
-export default class Filtros{
+// export default class Filtros{
 
-    static filtrarTodos(){
+//     static filtrarTodos(){
 
-        const divTodos = document.getElementById("todos")
-        divTodos.addEventListener("click", (evt) => {
-            console.log(evt.target);
-        })
-    }
+//         const divTodos = document.getElementById("todos")
+//         divTodos.addEventListener("click", (evt) => {
+//             console.log(evt.target);
+//         })
+//     }
 
-    static filtrarConcluidos(){
+//     static filtrarConcluidos(){
 
-        const divConcluido = document.getElementById("concluido")
-        divConcluido.addEventListener("click", (evt) => {
-            console.log(evt.target);
-        })
-    }
+//         const divConcluido = document.getElementById("concluido")
+//         divConcluido.addEventListener("click", (evt) => {
+//             console.log(evt.target);
+//         })
+//     }
 
-    static atualizarCheckbox(){
+//     static atualizarCheckbox(){
 
-        // const divConcluido = document.querySelector(".__boxButtons--Titulo--modelo1")
+//         const check = document.querySelector(".tarefa__cumprido--check")
 
-    }
-}
+//         check.addEventListener("click", (evt) => {
+
+//         })
+
+//     }
+// }

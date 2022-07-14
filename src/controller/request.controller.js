@@ -34,7 +34,6 @@ export default class Requests {
         body: JSON.stringify(imagemUsuarioURL),
       })
       .then(res => res.json())
-      .then(res => console.log(res))
       .then(res => res)
       .catch(err => console.log(err))
       return response
@@ -52,7 +51,6 @@ export default class Requests {
         body: JSON.stringify(criarHabito),
       })
       .then(res => res.json())
-      .then(res => console.log(res))
       .then(res => res)
       .catch(err => console.log(err))
     return response
@@ -101,7 +99,6 @@ const base_url = `https://habits-kenzie.herokuapp.com/api/habits/category/${cate
         body: JSON.stringify(atualizarHabito),
       })
       .then(res => res.json())
-      .then(res => console.log(res))
       .then(res => res)
       .catch(err => console.log(err))
     return response
@@ -117,7 +114,6 @@ const base_url = `https://habits-kenzie.herokuapp.com/api/habits/category/${cate
         },
       })
       .then(res => res.json())
-      .then(res => console.log(res))
       .then(res => res)
       .catch(err => console.log(err))
     return response
