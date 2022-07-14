@@ -142,9 +142,8 @@
             Ver mais
         </Button>
     </footer> -->
-<<<<<<< HEAD
     <!-- ********* MODAIS *********-->
-    <div class="modal" id="modal__CriarHabito">
+    <div class="modal" id="modal__criarHabito">
         <div class="container">
             <div class="modal__inner">
                 <form class="modal__form" id="modal__form__CriarHabito">
@@ -159,35 +158,42 @@
 
                     <label for="habit_category" class="Categoria">Categoria</label>
                     <select class="input" name="habit_category">
-                        <img src="../assets/img/KenzieHabitLogo.png" alt="">
-=======
-
-
-    <!-- <script src=""></script> -->
-    <!-- MODAIS: -->
-    <div class="modais">
-    <!-- modal CRIAR HABITO-->
-    <div class="modal" id="modal__CriarHabito">
-        <div class="container">
-            <div class="modal__inner">
-                <button class="modal__close">X</button>
-                    <h2>Criar hábito</h2>
-                    <form class="modal__form" id="modal__form__CriarHabito">
-                    <label for="habit_title">Título</label>
-                    <input type="text" name="habit_title" placeholder="Insira um Título">
-                    <label for="habit_description">Descrição</label>
-                    <input type="text" name="habit_description" placeholder="Insira uma descrição">
-                    <label for="habit_category" class="">Categoria</label>
-                    <select name="habit_category">
-                        <option>Selecionar Categoria</option>
->>>>>>> b5fcfaeb97c1782ea1ab7e6a4ba19e680eb42e96
                         <option>lazer</option>
                         <option>Saude</option>
                         <option>estudos</option>
                         <option>casa</option>
                         <option>trabalho</option>
                     </select>
-<<<<<<< HEAD
+                    <div class="btnOptionsModal">
+                        <button class="button__excluir" type="submit">Excluir</button>
+                        <button class="button__Salvar" id="submit__inserirHabito" type="submit">Salvar
+                            Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div class="modal" id="modal__editarHabito">
+        <div class="container">
+            <div class="modal__inner">
+                <form class="modal__form" id="modal__form__CriarHabito">
+                    <button class="modal__close">X</button>
+                    <h2 id="criarHabito">Editar hábito</h2>
+                    <label for="habit_title" class="Categoria">Título</label>
+                    <input id="inputTitulo" type="text" name="habit_title" placeholder="Insira um Título">
+
+                    <label for="habit_description" class="Categoria">Descrição</label>
+                    <textarea id="inputDescrição" type="text" name="habit_description"
+                        placeholder="Insira uma descrição"></textarea>
+
+                    <label for="habit_category" class="Categoria">Categoria</label>
+                    <select class="input" name="habit_category">
+                        <option>lazer</option>
+                        <option>Saude</option>
+                        <option>estudos</option>
+                        <option>casa</option>
+                        <option>trabalho</option>
+                    </select>
                     <div class="statusCheck">
                         <h2>Status</h2>
                         <input type="checkbox" name="" id="">
@@ -196,164 +202,53 @@
                         <button class="button__excluir" type="submit">Excluir</button>
                         <button class="button__Salvar" id="submit__inserirHabito" type="submit">Salvar
                             Alterações</button>
-=======
-                    <div class="btnOptionsModal">
-                    <button class="button__modal" type="submit">Excluir</button>
-                    <button class="button__Salvar" id="submit__inserirHabito" type="submit">Salvar Alterações</button>
->>>>>>> b5fcfaeb97c1782ea1ab7e6a4ba19e680eb42e96
                     </div>
                 </form>
             </div>
         </div>
-    </div>
-<<<<<<< HEAD
+    </div> 
     <!-- modal EDITAR HABITO-->
-    <!-- <div class="modal"  id="modal__editarHabito">
-    <div class="container">
-        <div class="modal__inner">
-            <button class="modal__close">X</button>
-                <h2>Editar hábito</h2>
-            <form class="modal__form" id="modal__form__editarHabito">
-
-                <label for="habit_title">Título</label>
-                <input type="text" name="habit_title" placeholder="Insira um Título">
-
-                <label for="habit_description">Descrição</label>
-                <input type="text" name="habit_description" placeholder="Insira uma descrição">
-
-                <label for="habit_category" class="">Categoria</label>
-                    <select name="habit_category">
-                        <option>Selecionar Categoria</option>
-                        <option>lazer</option>
-                        <option>Saude</option>
-                        <option>estudos</option>
-                        <option>casa</option>
-                        <option>trabalho</option>
-                    </select>
-                </div>
-                    <span>Status</span>
-                    <input type="checkbox" class="form-check-input"/>
-                <div>
-
-                <button class="button__modal" id="submit__excluirEdicao" type="submit">Excluir</button>
-                <button class="button__modal" id="submit__salvarEdit" type="submit">Salvar alterações</button>
-            </form>
-        </div>
-    </div> -->
-    </div>
-
     <!-- modal Editar perfil-->
-    <!-- <div class="modal"  id="modal__editarPerfil">
-    <div class="container">
-        <div class="modal__inner">
-            <button class="modal__close">X</button>
-                <h2>Editar perfil</h2>
-            <form class="modal__form" id="modal__form__editarPerfil">
-                <label for="usr_name">Nome</label>
-                <input type="text" name="usr_name" >
-
-                <label for="usr_image">Url da imagem do perfil</label>
-                <input type="url" name="usr_image">
-
-                <button class="button__modal" id="submit__edicaoPerfil" type="submit">Salvar alterações</button>
-            </form>
+    <div class="modal" id="modal__editarPerfil">
+        <div class="container__edtiarPerfil">
+            <div class="__edtiarPerfil--box">
+                <div class="__edtiarPerfil--box--box">
+                    <div class="__edtiarPerfil--box--btn">
+                        <button class="__edtiarPerfil--btnFechar">X</button>
+                    </div>
+                    <div class="__edtiarPerfil__head">
+                        <h2 class="__edtiarPerfil__titulo">Editar perfil</h2>
+                    </div>
+                </div>
+                <form class="__edtiarPerfil__formulario--box" id="modal__form__editarPerfil">
+                    <div class="__formulario__box--nome">
+                        <label for="usr_name">Nome</label>
+                        <input class="__edtiarPerfil__formulario--nome" type="text" name="usr_name" placeholder="Digite seu nome"> 
+                    </div>
+                    <div class="__formulario__box--url">
+                        <label for="usr_image">Url da imagem do perfil</label>
+                        <input class="__edtiarPerfil__formulario--imagem" type="url" name="usr_image" placeholder="https://imagem.com.br">    
+                    </div>
+                    <button class="__formulario__box__botão" id="submit__edicaoPerfil" type="submit">Salvar alterações</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-</div> -->
-
+    </div>
     <!-- modal Excluir Habito -->
     <!-- <div class="modal" id="modal__excluirHabito">
-    <div class="container">
-        <div class="modal__inner">
-            <button class="modal__close">X</button>
+        <div class="container">
+            <div class="modal__inner">
+                <button class="modal__close">X</button>
                 <h2>Excluir habito</h2>
-                    <h2>Tem certeza que deseja excluir este hábito?</h2>
-                    <p>Após a exclusão não é possível desfazer.</p>
-                    <button class="button__modal" id="submit__cacelarDelete" type="submit">Cancelar</button>
-                    <button class="button__modal" id="submit__deletarTarefa" type="submit">Sim, excluir tarefa</button>
-=======
-
-    <!-- modal EDITAR HABITO-->
-    <div class="modal"  id="modal__editarHabito">
-            <div class="container">
-                <div class="modal__inner">
-                    <button class="modal__close">X</button>
-                        <h2>Editar hábito</h2>
-                    <form class="modal__form" id="modal__form__editarHabito">
-
-                        <label for="habit_title">Título</label>
-                        <input type="text" name="habit_title" placeholder="Insira um Título">
-
-                        <label for="habit_description">Descrição</label>
-                        <input type="text" name="habit_description" placeholder="Insira uma descrição">
-
-                        <label for="habit_category" class="">Categoria</label>
-                            <select name="habit_category">
-                                <option>Selecionar Categoria</option>
-                                <option>lazer</option>
-                                <option>Saude</option>
-                                <option>estudos</option>
-                                <option>casa</option>
-                                <option>trabalho</option>
-                            </select>
-                        </div>
-                            <span>Status</span>
-                            <input type="checkbox" class="form-check-input"/>
-                        <div>
-
-                        <button class="button__modal" id="submit__excluirEdicao" type="submit">Excluir</button>
-                        <button class="button__modal" id="submit__salvarEdit" type="submit">Salvar alterações</button>
-                    </form>
-                </div>
+                <h2>Tem certeza que deseja excluir este hábito?</h2>
+                <p>Após a exclusão não é possível desfazer.</p>
+                <button class="button__modal" id="submit__cacelarDelete" type="submit">Cancelar</button>
+                <button class="button__modal" id="submit__deletarTarefa" type="submit">Sim, excluir tarefa</button>
             </div>
         </div>
-
-    <!-- modal Editar perfil-->
-    <div class="modal"  id="modal__editarPerfil">
-            <div class="container">
-                <div class="modal__inner">
-                    <button class="modal__close">X</button>
-                        <h2>Editar perfil</h2>
-                    <form class="modal__form" id="modal__form__editarPerfil">
-                        <label for="usr_name">Nome</label>
-                        <input type="text" name="usr_name" >
-
-                        <label for="usr_image">Url da imagem do perfil</label>
-                        <input type="url" name="usr_image">
-
-                        <button class="button__modal" id="submit__edicaoPerfil" type="submit">Salvar alterações</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal Excluir Habito -->
-    <div class="modal" id="modal__excluirHabito">
-            <div class="container">
-                <div class="modal__inner">
-                    <button class="modal__close">X</button>
-                        <h2>Excluir habito</h2>
-                            <h2>Tem certeza que deseja excluir este hábito?</h2>
-                            <p>Após a exclusão não é possível desfazer.</p>
-                            <button class="button__modal" id="submit__cacelarDelete" type="submit">Cancelar</button>
-                            <button class="button__modal" id="submit__deletarTarefa" type="submit">Sim, excluir tarefa</button>
-                </div>
-            </div>
->>>>>>> b5fcfaeb97c1782ea1ab7e6a4ba19e680eb42e96
-        </div>
-    </div>
-</div>
-
-<<<<<<< HEAD
-</div> -->
-=======
-    </div>
-
-
->>>>>>> b5fcfaeb97c1782ea1ab7e6a4ba19e680eb42e96
+    </div> -->
     <script type="module" src="../scripts/dashboard.script.js"></script>
-</body>
+</body> -->
 
 </html>

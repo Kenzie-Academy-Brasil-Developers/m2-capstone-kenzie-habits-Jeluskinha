@@ -2,6 +2,7 @@
     --brand1: #415AF3;
     --brand2: #4150D2;
     --brand3: #D7E4FB;
+    --brand4: #A0ADF9;
     --gray1: #212529;
     --gray2: #343A40;
     --gray3: #ADB5BD;
@@ -243,7 +244,7 @@ footer{
     justify-self: flex-end;
     align-items: flex-end;
 }
-.modal{
+#modal__criarHabito{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -251,7 +252,7 @@ footer{
     left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.6);
-
+    display: none;
 }
     .modal > .container {
         display: flex;
@@ -265,7 +266,6 @@ footer{
             width: 25rem;
             height: 30rem;
             margin-top: 8rem;
-            border-radius: 16px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -276,18 +276,22 @@ footer{
         }
             .modal__close{
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 10px;
+                right: 10px;
                 background-color: transparent;
                 color: var(--gray3);
                 font-size: var(--titleSize3);
                 border:none;
-                width: 4rem;
-                height: 4rem;
+                width: 2rem;
+                height: 2rem;
                 cursor: pointer;
             }
-            .modal__close:hover{
-                color: var(--error1);
+            .modal__close:hover{  
+                background-size: contain;
+                background-color: var(--error1);
+                color: var(--gray7);
+                border-radius: 50%;
+                border-style: none;
             }
             #criarHabito{
                 height: 3rem;
@@ -300,7 +304,7 @@ footer{
                 .modal__form{
                     height: 100%;
                     width: 100%;
-                    padding: 0 2rem 1rem 2rem;
+                    padding: 1rem 2rem 1rem 2rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -331,18 +335,24 @@ footer{
                 padding: 10px;
                 outline: none;
                 border: none;
+                font-size: 1rem;
             }
             #inputDescrição{       
                 height: 5rem;         
                 width: 100%;
                 background-color: var(--gray6);
-                padding: 5px;
+                padding: 10px;
+                font-size: 1rem;
                 border-style: none;
                 resize: none;
                 outline: none;
                 text-align: left;
                 word-break: break-all;      
+                word-break: break-all;      
             }
+                #inputDescrição::-webkit-scrollbar {
+                    scrollbar-width: none;
+                }
                 #inputDescrição:hover{       
                     border: var(blue);         
                 }
@@ -378,14 +388,288 @@ footer{
                         background-color: var(--brand1); 
                         border: 1px solid cyan;
                     }   
-            .statusCheck{
-                width: 98%;
-                display: flex;
-                font-weight: 550;
-                font-size: 1rem;
-                justify-content: space-between;
+#modal__editarHabito{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+    .modal > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+    }
+        .modal__inner{
+            position: relative;
+            background-color: var(--gray7);
+            width: 25rem;
+            height: 30rem;
+            margin-top: 8rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1rem;
+            gap: 40px;
+        }
+            .modal__close{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: transparent;
+                color: var(--gray3);
+                font-size: var(--titleSize3);
+                border:none;
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
             }
+            .modal__close:hover{  
+                background-size: contain;
+                background-color: var(--error1);
+                color: var(--gray7);
+                border-radius: 50%;
+                border-style: none;
+            }
+            #criarHabito{
+                height: 3rem;
+                width: 100%;
+                font-weight: 600;
+                display: flex;
+                justify-content: flex-start;
+
+            }
+                .modal__form{
+                    height: 100%;
+                    width: 100%;
+                    padding: 1rem 2rem 1rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 15px;
+                    font-size: var(--titleSize3);
+                    color:var(--gray2);
+                }
+                    .Categoria{
+                        font-size: 1rem;
+                    }
+                    .input{
+                        height: 3rem;
+                        width: 100%;
+                        padding: 5px;
+                        background-color: var(--gray6);
+                        border: none;
+                    }
+            .btnOptionsModal{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between  ;
+            }
+            #inputTitulo{
+                width: 100%;
+                background-color: var(--gray6);
+                padding: 10px;
+                outline: none;
+                border: none;
+                font-size: 1rem;
+            }
+            #inputDescrição{       
+                height: 5rem;         
+                width: 100%;
+                background-color: var(--gray6);
+                padding: 10px;
+                font-size: 1rem;
+                border-style: none;
+                resize: none;
+                outline: none;
+                text-align: left;
+                word-break: break-all;      
+            }
+                #inputDescrição::-webkit-scrollbar {
+                    scrollbar-width: none;
+                }
+                #inputDescrição:hover{       
+                    border: var(blue);         
+                }
+            .button__excluir{
+                height: 3rem;
+                width: 48%;
+                border-radius: 5px;
+                border: transparent;
+                padding: 10px;
+                background-color: var(--gray5);
+                color: var(--gray1);
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+                .button__excluir:hover{
+                    color: var(--gray5);
+                    background-color: var(--error1);
+            
+                }    
+            .button__Salvar{
+                height: 3rem;
+                width: 48%;
+                border-radius: 5px;
+                border: 1px solid blue;
+                padding: 10px;
+                background-color: var(--brand2);
+                color: var(--gray5);
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+                .button__Salvar:hover{
+                    color: white;
+                    background-color: var(--brand1); 
+                    border: 1px solid cyan;
+                }   
+        .statusCheck{
+            width: 98%;
+            display: flex;
+            font-weight: 550;
+            font-size: 1rem;
+            justify-content: space-between;
+        }
+#modal__editarPerfil{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}   
+    .container__edtiarPerfil{
+        margin-top: 50px;
+        font-style: var(--font);
+        font-size: var(--titleSize2);
+        color: var(--gray2);
+        
+    }
+        .__edtiarPerfil--box{
+            height: 22rem;
+            width: 25rem;
+            padding: 1rem 1rem 1rem 1rem;
+            background-color: var(--gray7);
+            border-radius: 3%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+            .__edtiarPerfil--box--box{
+                height: 10%;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+                .__edtiarPerfil--box--btn{
+                    height: 100%;;
+                    width: 10%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                    .__edtiarPerfil--btnFechar{
+                        width: max-content;
+                        right: 0;
+                        background-color: transparent;
+                        border-style: none;
+                    }
+                        .__edtiarPerfil--btnFechar:hover{
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            right: 0;
+                            background-color: var(--error1);
+                            color: var(--gray7);
+                            border-radius: 50%;
+                            border-style: none;
+                        }
+                .__edtiarPerfil__head{
+                    height: 100%;;
+                    width: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                    .__edtiarPerfil__titulo{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-content: center;
+                        font-weight: 600;
+                        color: var(--gray2);
+                    } 
+            .__edtiarPerfil__formulario--box{
+                height: 90%;
+                background-color: var(--gray7);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 2rem;
+            }
+                .__formulario__box--nome{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    font-size: var(--titleSize4)
                     
+                }
+                    .__edtiarPerfil__formulario--nome{
+                        height: 2rem;
+                        width: 100%;
+                        padding: 5px;
+                        font-size: var(--titleSize5);
+                        background-color: var(--gray6);
+                    }
+                .__formulario__box--url{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    font-size: var(--titleSize4)
+                   
+                }
+                    .__edtiarPerfil__formulario--imagem{
+                        height: 2rem;
+                        width: 100%;
+                        padding: 5px;
+                        font-size: var(--titleSize5);
+                        background-color: var(--gray6);
+                    }
+
+                .__formulario__box__botão{
+                    height: 2rem;
+                    width: 100%;
+                    border-style: none;
+                    align-self: center;
+                    background-color: var(--brand4);
+                }
+                    .__formulario__box__botão:hover{
+                        background-color: var(--brand2);
+                        color: var(--gray7);
+                    }
+    
+/* #modal__editarPerfil{
+/*  modal__editarHabito{
+    display: none;
+}
+#modal__excluirHabito{
+    display: none;
+} */
+
 @media (max-width: 1050px){
     .__tabela__cabecalho--descrição{
         display: none;
