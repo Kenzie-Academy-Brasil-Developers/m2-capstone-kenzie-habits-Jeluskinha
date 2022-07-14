@@ -1,3 +1,4 @@
+
 import Requests from "../controller/request.controller.js"
 
 export default class Habits{
@@ -62,3 +63,4 @@ export default class Habits{
         })
      }
 }
+
