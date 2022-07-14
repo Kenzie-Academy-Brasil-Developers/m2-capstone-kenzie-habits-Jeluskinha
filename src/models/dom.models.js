@@ -10,7 +10,7 @@ export default class Habits{
         //selecionar html
         const tabela = document.querySelector(".containerNav__tabela")
        
-        lista.forEach((item) => {
+        const itensHabitos = await lista.forEach((item) => {
     
              //criar elementos lista de tarefas
             const linhaTabela = document.createElement("tr")
@@ -36,11 +36,12 @@ export default class Habits{
             celulaDescricao.classList.add("tarefa__descricao")
             descricao.classList.add("tarefa__descricao--texto")
             celulaCategoria.classList.add("tarefa__categoria")
-            categoria.classList.add("tarefa__categoria--box")
+            categoria.classList.add("tarefa__categoria--texto")
             tabelaOpcoes.classList.add("tarefa__opcoes")
             opcoes.classList.add("tarefa__opcoes--botao")
         
             check.type = "checkbox"
+            check.id = item.habit_id
             titulo.innerText = item.habit_title
             descricao.innerText = item.habit_description
             categoria.innerText = item.habit_category
@@ -58,9 +59,11 @@ export default class Habits{
                               tabelaOpcoes,
                               )
             tabela.append(linhaTabela)
-            // tabela.innerHTML = ""
-        
+            tabela.innerHTML = ""
+            return tabela
         })
+
+        return itensHabitos
      }
 }
 
