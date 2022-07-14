@@ -20,12 +20,14 @@ export default class Modal {
     }
 
     static clicarEditarPerfil(){
-        const editarPerfil = document.querySelector(".__boxButtons--Titulo--modelo2")
+        const botaoEditPerfil = document.querySelector(".button__editarPerfil")
         const modal = document.getElementById("modal__editarPerfil")
         
         btnCriar.addEventListener("click", (evt)=>{
             modal.style.display = "block"
         })
+        
+        botaoEditPerfil.addEventListener("click", this.clicarEditarPerfil())
     }
 
     static clicarExcluir(){

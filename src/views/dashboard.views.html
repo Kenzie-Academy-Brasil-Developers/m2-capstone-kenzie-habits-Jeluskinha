@@ -16,29 +16,31 @@
         rel="stylesheet">
 </head>
 
+
 <body>
-
-    <header>
+     <header>
         <div class="usuario">
-
             <div class="usuario__header1">
                 <figure>
                     <img class="usuario__header1__logo" src="../assets/img/KenzieHabitLogo2.png"
                         alt="Kenzie habit logoTodos">
                 </figure>
-
-                <figure class="usuario__header1__userAvatar1--box">
-                    <img class="usuario__header1__userAvatar1" src="/src/assets/img/user.png" alt="imagem do usuário">
-                </figure>
+                <div class="dropdown">
+                    <figure class="usuario__header1__userAvatar1--box">
+                        <img class="usuario__header1__userAvatar1" src="/src/assets/img/user.png" alt="imagem do usuário">
+                    </figure>
+                    <div class="dropdown-content">
+                        <button class="button__editarPerfil">Editar Pefil</button>
+                        <button class="button__logout">Sair da conta</button>
+                    </div>
+                </div>
             </div>
-
             <div class="usuario__header2">
                 <figure class="usuario__header2__userAvatar2--box">
                     <img class="usuario__header2__userAvatar2" src="/src/assets/img/user.png" alt="imagem do usuário">
                 </figure>
                 <div class="usuario__header2__descricao">
                     <h2 class="usuario__header2__nomeUsuario">Fulano da Silva</h2>
-
                     <span class="usuario__header2__cargo">Kenzinho(a)</span>
                 </div>
             </div>
@@ -269,6 +271,7 @@
         </div>-->
 
     <script type="module" src="../scripts/dashboard.script.js"></script>
+
 </body> 
 
 </html>

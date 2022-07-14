@@ -53,18 +53,69 @@ body {
 .usuario__header1__logo{
     width: 131px;
 }
-.usuario__header1__userAvatar1--box{
+.usuario__header1__userAvatar1--box{    
+    padding: 0 30px 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .usuario__header1__userAvatar1{
+
     height: 40px;
     width: 40px;
     padding: 2px;
     border-radius: 50%;
     background-color: var(--brand1);
+    z-index: 1;
 }
+
+.dropdown{
+    position: relative;
+    display: inline;
+    padding: 0 30px 0 0;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    border-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 10px 16px 0px var(--gray1);
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+.dropdown-content button {
+    border-color: transparent;
+    width: 100%;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content button:hover {background-color: var(--brand1)}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+
 .usuario__header2{
     display: flex;
     padding:20px;
