@@ -56,12 +56,12 @@
                     </h2>
                 </div>
                 <div class="__boxButtons__botoes--div">
-                    <div id="todos" class="__boxButtons--Titulo--modelo1">
+                    <div class="__boxButtons--Titulo--modelo1">
                         <a>
                             Todos
                         </a>
                     </div>
-                    <div id="concluido" class="__boxButtons--Titulo--modelo1">
+                    <div class="__boxButtons--Titulo--modelo1">
                         <a>
                             Concluído
                         </a>
@@ -71,10 +71,7 @@
                     </button>
                 </div>
             </div>
-            <div class="containerNav__tabela"></div>
-
-                <!--
-                    <table class="containerNav__tabela">
+            <table class="containerNav__tabela">
                 <tr class="__tabela__cabecalho__linha">
                     <td class="__tabela__cabecalho--status">Status</td>
                     <td class="__tabela__cabecalho--titulo">Título</td>
@@ -82,8 +79,80 @@
                     <td class="__tabela__cabecalho--categoria">Categoria</td>
                     <td class="__tabela__cabecalho--editar">Editar</td>
                 </tr>
-            -->
-
+        <!-- inserir tarefas com DOM aqui <tr> para linha <td> para colunas -->
+        <!-- EXEMPLO: -->
+        <tr class="containerNav__tarefa__linha" id="">
+            <td class="tarefa__cumprido--checkbox">
+                <input type="checkbox" class="tarefa__cumprido--check" />
+            </td>
+            <td class="tarefa__titulo">
+                <p class="tarefa__titulo--texto">
+                    Titulo de tarefa pra fazer
+                </p>
+            </td>
+            <td class="tarefa__descricao">
+                <p class="tarefa__descricao--texto">
+                    Descrição da tarefa que a pessoa tem que desenvolver
+                </p>
+            </td>
+            <td class="tarefa__categoria">
+                <span class="tarefa__categoria--texto">
+                    Trabalho
+                </span>
+            </td>
+            <td class="tarefa__opcoes">
+                <button class="tarefa__opcoes--botao">...</button>
+            </td>
+        </tr>
+        <tr class="containerNav__tarefa__linha" id="">
+            <td class="tarefa__cumprido--checkbox">
+                <input type="checkbox" class="tarefa__cumprido--check" />
+            </td>
+            <td class="tarefa__titulo">
+                <p class="tarefa__titulo--texto">
+                    Titulo de tarefa pra fazer
+                </p>
+            </td>
+            <td class="tarefa__descricao">
+                <p class="tarefa__descricao--texto">
+                    Descrição da tarefa que a pessoa tem que desenvolver
+                </p>
+            </td>
+            <td class="tarefa__categoria">
+                <span class="tarefa__categoria--texto">
+                    Trabalho
+                </span>
+            </td>
+            <td class="tarefa__opcoes">
+                <button class="tarefa__opcoes--botao">...</button>
+            </td>
+        </tr>
+        <tr class="containerNav__tarefa__linha" id="">
+            <td class="tarefa__cumprido--checkbox">
+                <input type="checkbox" class="tarefa__cumprido--check" />
+            </td>
+            <td class="tarefa__titulo">
+                <p class="tarefa__titulo--texto">
+                    Titulo de tarefa pra fazer
+                </p>
+            </td>
+            <td class="tarefa__descricao">
+                <p class="tarefa__descricao--texto">
+                    Descrição da tarefa que a pessoa tem que desenvolver
+                </p>
+            </td>
+            <td class="tarefa__categoria">
+                <span class="tarefa__categoria--texto">
+                    Trabalho
+                </span>
+            </td>
+            <td class="tarefa__opcoes">
+                <button class="tarefa__opcoes--botao">...</button>
+            </td>
+        </tr>
+        <!-- // -->
+        </table>
+        </div>
     </main>
     <footer>
         <Button>
@@ -199,9 +268,10 @@
 
             </div>
     
-        </div>
+        </div>-->
 
     <script type="module" src="../scripts/dashboard.script.js"></script>
-</body> -->
-    <script type="module" src="../scripts/dashboard.script.js"></script>
+
+</body> 
+
 </html>
