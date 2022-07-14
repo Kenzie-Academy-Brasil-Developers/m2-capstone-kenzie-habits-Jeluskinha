@@ -154,6 +154,7 @@ main{
     background-color: var(--error1); /* Red */
     color: white;
     margin-bottom: 15px;
+    display: none;
   }
 
   .alert div{
@@ -163,11 +164,6 @@ main{
     font-size: var(--textSize3);
     color: var(--gray6)
     padding: 10px;
-
-  }
-
-  .alert_text{
-
   }
   
   .closebtn {
