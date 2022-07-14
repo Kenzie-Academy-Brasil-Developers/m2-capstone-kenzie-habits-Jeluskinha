@@ -1,16 +1,12 @@
 import Habits from "../models/dom.models.js";
 import Requests from "../controller/request.controller.js"
 import Modal from "../models/modal.models.js";
-import Filtros from "../models/filtros.models.js";
 
 Habits.adicionarLista()
 
 Modal.clicarCriar()
 Modal.clicarEditarHabito()
 Modal.clicarExcluir()
-
-Filtros.filtrarTodos()
-Filtros.filtrarConcluidos()
 
 
 const formCriarHabito = document.querySelector("#modal__form__CriarHabito")
