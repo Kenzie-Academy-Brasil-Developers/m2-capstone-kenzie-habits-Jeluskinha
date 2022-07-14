@@ -13,6 +13,7 @@ async function login(e){
     await Requests.login(formDataObj)
 
     const responseResultado = await Requests.login(formDataObj)
+    
     if(responseResultado===undefined){
         console.error("ACESSO NEGADO")
         const alert = document.querySelector(".closebtn")
