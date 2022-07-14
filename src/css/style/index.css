@@ -162,9 +162,9 @@ main{
     flex-direction: column;
     align-items: center;
     font-size: var(--textSize3);
-    color: var(--gray6)
+    color: var(--gray6);
     padding: 10px;
-  }
+    }
   
   .closebtn {
     padding: 0 0 10px 0;
