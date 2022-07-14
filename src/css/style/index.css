@@ -25,7 +25,8 @@
     --weigth3: 400;
 }
 
-body{   
+body{  
+    width: 100%; 
     font-family: var(--font); 
     display:flex;
     min-height:100vh;
@@ -34,6 +35,7 @@ body{
     background-color: var(--brand3);
 }
 main{
+    width: 100%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -42,15 +44,20 @@ main{
 }
 
 .container{
+    width: 100%;
     display: flex;
     flex-direction: column;
-
+    justify-content: flex-start;
 }
 .apresentacao{
     display: flex;
     flex-direction: column;
     background-color: var(--brand1);
     padding: 80px 50px 0 50px;
+}
+
+.apresentacao img{
+    max-width: 100%;
 }
 .fraseDestaque{
     display: flex;
@@ -136,6 +143,50 @@ main{
     color: var(--gray6);
     font-weight: var(--weigth1)
 }
+
+.alert {
+    margin-top: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--error1); /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .alert div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--textSize3);
+    color: var(--gray6)
+    padding: 10px;
+
+  }
+
+  .alert_text{
+
+  }
+  
+  .closebtn {
+    padding: 0 0 10px 0;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+}
+
 
 
   /*        */
@@ -228,4 +279,10 @@ main{
     .inputSenha input{
         background-color: var(--gray4)
     }
+
+    .alert{
+        padding: 20px 60px 20px 40px
+    }
+
+
 }
