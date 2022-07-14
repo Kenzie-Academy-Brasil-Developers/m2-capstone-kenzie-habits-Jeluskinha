@@ -67,10 +67,13 @@ formMudarPefil.addEventListener('submit', mudarPefil)
 
 //FALTA FINALIZAR
 
-// const checkCumprido = document.querySelector(".tarefa__cumprido--check")
+const checkCumprido = document.querySelector(".tarefa__cumprido--check")
 
-// async function check(e){
-//     e.preventDefault()
+async function check(e){
+    e.preventDefault()
+
+    console.log(e.target.checked);
+    //e.target.id
 
 //    if(e.target.checked){
 
@@ -78,5 +81,5 @@ formMudarPefil.addEventListener('submit', mudarPefil)
 //     console.log(complete);
 //    }
 
-// }
-// checkCumprido.addEventListener('change', check)
+}
+checkCumprido.addEventListener('change', check)
