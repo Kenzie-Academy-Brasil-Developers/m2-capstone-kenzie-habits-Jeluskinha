@@ -8,6 +8,8 @@
     --gray4: #E9ECEF;
     --gray5: #F1F3F5;
     --gray6: #F8F9FA;
+    --gray7: #FFFFFF;
+    --gray8: #F1F3F5
     --sucess: #56CF8E;
     --error1: #E64445;
     --error2: #F03839;
@@ -146,26 +148,25 @@ main{
             width: 50%;
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
-            padding-right: 2rem;
+            gap: 1rem;
         }
-        .__boxButtons--Titulo--modelo1{
-            font-family: var(--font);
-            padding: 8px 0 0 0;
-            font-size: var(--textSize3);
-            color: var(--gray1);
-            font-weight: var(--weigth3);
-            width: 80px;
-            height: 32px;
-        }
-        .__boxButtons--Titulo--modelo2{
-            width: 90px;
-            height: 32px;
-            border: var(--brand1);
-            border-radius: 5px;
-            background-color: var(--brand1);
-            color: var(--gray6);
-            font-weight: var(--weigth3);
+            .__boxButtons--Titulo--modelo1{
+                font-family: var(--font);
+                padding: 8px 0 0 0;
+                font-size: var(--textSize3);
+                color: var(--gray1);
+                font-weight: var(--weigth3);
+                width: 5rem;
+                height: 32px;
+            }
+            .__boxButtons--Titulo--modelo2{
+                width: 5rem;
+                height: 32px;
+                border: var(--brand1);
+                border-radius: 5px;
+                background-color: var(--brand1);
+                color: var(--gray5);
+                font-weight: var(--weigth3);
         }
 
 .containerNav__tabela{
@@ -174,8 +175,10 @@ main{
     font-family: var(--font);
     color: var(--gray3);
     margin: 20px 0 0 0;
+    display: flex;
 }
 tbody{
+    height: 22rem;
     width: 100%;
 }
     .__tabela__cabecalho__box{
@@ -254,27 +257,236 @@ tbody{
                 font-size: var(--titleSize2);
                 color: var(--gray3);
             }
-
-
-.modais{
-    width: fit-content;
+footer{
+    height: 3rem;
     display: flex;
-    flex-direction: column;
-    width: 100;
+    justify-content: center;
+    justify-self: flex-end;
+    align-items: flex-end;
 }
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
 
+}
+    .modal > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+    }
+        .modal__inner{
+            position: relative;
+            background-color: var(--gray7);
+            width: 25rem;
+            height: 30rem;
+            margin-top: 8rem;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1rem;
+            gap: 40px;
+        }
+            .modal__close{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: transparent;
+                color: var(--gray3);
+                font-size: var(--titleSize3);
+                border:none;
+                width: 4rem;
+                height: 4rem;
+                cursor: pointer;
+            }
+            .modal__close:hover{
+                color: var(--error1);
+            }
+            #criarHabito{
+                height: 3rem;
+                width: 100%;
+                font-weight: 600;
+                display: flex;
+                justify-content: flex-start;
 
-@media (max-width: 768px){
+            }
+                .modal__form{
+                    height: 100%;
+                    width: 100%;
+                    padding: 0 2rem 1rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 15px;
+                    font-size: var(--titleSize3);
+                    color:var(--gray2);
+                }
+                    .Categoria{
+                        font-size: 1rem;
+                    }
+                    .input{
+                        height: 3rem;
+                        width: 100%;
+                        padding: 5px;
+                        background-color: var(--gray6);
+                        border: none;
+                    }
+            .btnOptionsModal{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between  ;
+            }
+            #inputTitulo{
+                width: 100%;
+                background-color: var(--gray6);
+                padding: 10px;
+                outline: none;
+                border: none;
+            }
+            #inputDescrição{       
+                height: 5rem;         
+                width: 100%;
+                background-color: var(--gray6);
+                padding: 5px;
+                border-style: none;
+                resize: none;
+                outline: none;
+                text-align: left;
+                word-break: break-all;      
+            }
+                #inputDescrição:hover{       
+                    border: var(blue);         
+                }
+                .button__excluir{
+                    height: 3rem;
+                    width: 48%;
+                    border-radius: 5px;
+                    border: transparent;
+                    padding: 10px;
+                    background-color: var(--gray5);
+                    color: var(--gray1);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                    .button__excluir:hover{
+                        color: var(--gray5);
+                        background-color: var(--error1);
+                
+                    }    
+                .button__Salvar{
+                    height: 3rem;
+                    width: 48%;
+                    border-radius: 5px;
+                    border: 1px solid blue;
+                    padding: 10px;
+                    background-color: var(--brand2);
+                    color: var(--gray5);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                    .button__Salvar:hover{
+                        color: white;
+                        background-color: var(--brand1); 
+                        border: 1px solid cyan;
+                    }   
+            .statusCheck{
+                width: 98%;
+                display: flex;
+                font-weight: 550;
+                font-size: 1rem;
+                justify-content: space-between;
+            }
+                    
+@media (max-width: 1050px){
     .__tabela__cabecalho--descrição{
         display: none;
     }
     .__tabela__cabecalho--categoria{
         display: none;
     }
-        .tarefa__descricao{
-            display: none;
-        }
         .tarefa__categoria{
             display: none;
         }
+}
+@media (max-width: 800px){
+    .__boxButtons{
+        width: 30%;
+    }
+    .__boxButtons__botoes--div{
+        width: 70%;
+    }
+    
+    .__tabela__cabecalho--titulo{
+        padding-left: 3rem;
+    }
+    .tarefa__titulo{
+        padding-left: 3rem;
+    }
+
+
+    .__tabela__cabecalho__linha{
+        justify-content: center;
+    }
+        .__tabela__cabecalho--descrição{
+            display: none;
+        }
+        .__tabela__cabecalho--categoria{
+            display: none;
+        }
+            .tarefa__descricao{ 
+                display: none;
+            }
+            .tarefa__categoria{
+                display: none;
+            }
+}
+@media (max-width: 500px){
+    .containerNav{
+        gap: 0;
+    }
+        .containerNav__boxButoons{
+            width: 80%;
+            flex-direction: column; 
+            gap: 1.5rem;
+        }
+            .__boxButtons{
+                padding-left: 0; 
+            }
+            .__boxButtons__botoes--div{
+                padding: 0;
+                width: auto;
+                align-content: center;
+                justify-content: space-between;
+            }
+    /* div Tarefas */
+    .__tabela__cabecalho--titulo{
+        padding-left: 0;
+    }
+    .tarefa__titulo{
+        padding-left: 0;
+    } 
+
+    /* Modal Criar hábito */
+    #modalCriarhabito{
+        height: 250px;
+        width: 250px;
+        position: fixed;
+        top: 250px;
+        bottom: 50%;
+        right: 10%;
+        z-index: 99999;
+        background: rgba(0,0,0, 0.5);
+        align-items: center;
+        justify-content: center;    
+    }
 }
