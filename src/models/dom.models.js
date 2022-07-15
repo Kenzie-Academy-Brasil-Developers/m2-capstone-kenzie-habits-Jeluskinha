@@ -8,38 +8,28 @@ export default class Habits{
         const lista = await Requests.readAll()    
 
         //selecionar html
-        const tabela = document.querySelector(".containerNav__tabela")
+        const tabela = document.querySelector(".tasks")
        
         lista.forEach((item) => {
             
              //criar elementos lista de tarefas
-            const linhaTabela = document.createElement("tr")
-            linhaTabela.id = item.habit_id
-            const celulaCheckbox = document.createElement("td")
+            const linhaTabela = document.createElement("li")
             const check = document.createElement("input")
-            const celulaTitulo = document.createElement("td")
             const titulo = document.createElement("p")
-            const celulaDescricao = document.createElement("td")
             const descricao = document.createElement("p")
-            const celulaCategoria = document.createElement("td")
-            const categoria = document.createElement("p")
-            const tabelaOpcoes = document.createElement("td")
+            const categoria = document.createElement("span")
             const opcoes = document.createElement("button")
     
     
             //adicionar classes
-            linhaTabela.classList.add("containerNav__tarefa__linha")
-            celulaCheckbox.classList.add("tarefa__cumprido--checkbox")
-            check.classList.add("tarefa__cumprido--check")
-            celulaTitulo.classList.add("tarefa__titulo")
-            titulo.classList.add("tarefa__titulo--texto")
-            celulaDescricao.classList.add("tarefa__descricao")
-            descricao.classList.add("tarefa__descricao--texto")
-            celulaCategoria.classList.add("tarefa__categoria")
-            categoria.classList.add("tarefa__categoria--texto")
-            tabelaOpcoes.classList.add("tarefa__opcoes")
-            opcoes.classList.add("tarefa__opcoes--botao")
+            linhaTabela.classList.add("task__linha")
+            check.classList.add("task__check")
+            titulo.classList.add("task__title")
+            descricao.classList.add("task__description")
+            categoria.classList.add("task__category")
+            opcoes.classList.add("task__edit")
         
+            linhaTabela.id = item.habit_id
             check.type = "checkbox"
             check.id = item.habit_id
             titulo.innerText = item.habit_title
@@ -47,19 +37,9 @@ export default class Habits{
             categoria.innerText = item.habit_category
             opcoes.innerHTML = "..."
         
-            tabelaOpcoes.append(opcoes)
-            celulaCategoria.append(categoria)
-            celulaDescricao.append(descricao)
-            celulaTitulo.append(titulo)
-            celulaCheckbox.append(check)
-            linhaTabela.append(celulaCheckbox,
-                              celulaTitulo,
-                              celulaDescricao,
-                              celulaCategoria,
-                              tabelaOpcoes,
-                              )
+            linhaTabela.append(check,titulo,descricao,categoria,opcoes)
             tabela.append(linhaTabela)
-            tabela.innerHTML = ""
+            // tabela.innerHTML = ""
             // return tabela
         })
 

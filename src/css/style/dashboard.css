@@ -31,8 +31,8 @@ header{
     height: 20%;
 }
 body {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     font-family: var(--font);
     width: 100%;
     height: 100%;
@@ -153,21 +153,23 @@ body {
 }
 main{
     height: 80%;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 .containerNav{
     height: 100%;
-    gap: 2rem;
+    /* gap: 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: #86c2ff; */
 }
     .containerNav__boxButoons{
         margin-top: 2rem;
         width: 80%;
         display: flex;
         flex-direction: row;
+        /* background-color: blue; */
     }
         .__boxButtons{
             width: 50%;
@@ -195,6 +197,7 @@ main{
                 font-weight: var(--weigth3);
                 width: 5rem;
                 height: 32px;
+                cursor: pointer;
             }
             .__boxButtons--Titulo--modelo2{
                 width: 5rem;
@@ -204,38 +207,113 @@ main{
                 background-color: var(--brand1);
                 color: var(--gray5);
                 font-weight: var(--weigth3);
+                cursor: pointer;
         }
 
-.containerNav__tabela{
+/* CABECALHO */
+
+.cabecalho{
+    /* margin-top: 2rem; */
+    width: 80%;
+    display: flex;
+    background-color: aqua;
+}
+
+.status{
+    width: 10%;
+    background-color: #E64445;
+}
+
+.titulo{
+    width: 30%;
+    background-color: #3e8e41;
+}
+
+.descricao{
+    width: 30%;
+    background-color: #D7E4FB;
+}
+
+.categoria{
+    width: 20%;
+    background-color: blanchedalmond;
+}
+
+.editar{
+    width: 10%;
+    background-color: blueviolet;
+}
+
+/* LISTA DE TAREFAS */
+
+.tasks{
+    /* margin-top: 2rem; */
+    width: 80%;
+}
+
+.task__linha{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: bisque;
+}
+
+.task__check{
+    width: 10%;
+    background-color: #E64445;
+}
+
+.task__title{
+    width: 30%;
+    background-color: #3e8e41;
+}
+
+.task__description{
+    width: 30%;
+    background-color: #D7E4FB;
+}
+
+.task__category{
+    width: 20%;
+    background-color: blanchedalmond;
+}
+
+.task__edit{
+    width: 10%;
+    background-color: blueviolet;
+}
+/* .containerNav__tabela{
     height: 23rem;
     width: 80%;
     background-color: transparent;
     font-family: var(--font);
-    color: var(--gray3);
+    color: var(--gray1);
     margin: 20px 0 0 0;
     display: flex;
+    background-color: #A0ADF9;
 }
+
 tbody{
     height: 22rem;
     width: 100%;
+    background-color: orangered;
 }
-    .__tabela__cabecalho__box{
-        background-color: red;
-    }
-        .__tabela__cabecalho__linha{
-            width: inherit;
+        th .__tabela__cabecalho__linha{
+            width: 100%;
             height: 2rem;
+            background-color: #3e8e41;
         }
             .__tabela__cabecalho--status{
                 padding-right: 1rem;
+                width: 10%;
+                font-weight: var(--weigth3);
+            }
+            .__tabela__cabecalho--titulo{
                 width: fit-content;
                 font-weight: var(--weigth3);
             }
-            .__tabela__cabecalho--titulo2{
-                width: fit-content;
-                font-weight: var(--weigth3);
-            }
-            .__tabela__cabecalho--descrição{
+            .__tabela__cabecalho--descricao{
                 max-width: 30%;
             }
 
@@ -249,7 +327,10 @@ tbody{
                 align-content: center;
                 width: fit-content;
                 font-weight: var(--weigth3);
-            }
+            } */
+
+/* DOM */
+
     .containerNav__tarefa__linha{
         width: fit-content;
         border: var(--gray5) 5px;
@@ -261,9 +342,7 @@ tbody{
             padding-right: 1rem;
             width: fit-content;
         }
-            /* .tarefa__titulo--texto{
 
-            } */
         .tarefa__descricao{
             padding-right: 1rem;
             width: 40%;
@@ -288,13 +367,13 @@ tbody{
                 font-size: var(--titleSize2);
                 color: var(--gray3);
             }
-footer{
+/* footer{
     height: 3rem;
     display: flex;
     justify-content: center;
     justify-self: flex-end;
     align-items: flex-end;
-}
+} */
 #modal__criarHabito{
     width: 100vw;
     height: 100vh;
@@ -805,4 +884,3 @@ footer{
         justify-content: center;    
     }
 }
-

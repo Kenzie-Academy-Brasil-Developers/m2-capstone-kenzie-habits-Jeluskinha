@@ -5,6 +5,7 @@ import Modal from "../models/modal.models.js";
 Habits.adicionarLista()
 
 Modal.clicarCriar()
+Modal.fecharCriar()
 Modal.clicarEditarHabito()
 Modal.clicarExcluir()
 

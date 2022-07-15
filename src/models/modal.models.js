@@ -3,10 +3,19 @@ export default class Modal {
     static clicarCriar(){
 
         const btnCriar = document.querySelector(".__boxButtons--Titulo--modelo2")
-        const modal = document.getElementById("modal__CriarHabito")
+        const modal = document.getElementById("modal__criarHabito")
         
         btnCriar.addEventListener("click", (evt)=>{
             modal.style.display = "block"
+        })
+    }
+    static fecharCriar(){
+
+        const btnFechar = document.querySelector(".modal__close")
+        const modal = document.getElementById("modal__criarHabito")
+        
+        btnFechar.addEventListener("click", (evt)=>{
+            modal.style.display = "none"
         })
     }
 
@@ -20,14 +29,14 @@ export default class Modal {
     }
 
     static clicarEditarPerfil(){
-        const botaoEditPerfil = document.querySelector(".button__editarPerfil")
-        const modal = document.getElementById("modal__editarPerfil")
+        // const botaoEditPerfil = document.querySelector(".button__editarPerfil")
+        // const modal = document.getElementById("modal__editarPerfil")
         
-        btnCriar.addEventListener("click", (evt)=>{
-            modal.style.display = "block"
-        })
+        // btnCriar.addEventListener("click", (evt)=>{
+        //     modal.style.display = "block"
+        // })
         
-        botaoEditPerfil.addEventListener("click", this.clicarEditarPerfil())
+        // botaoEditPerfil.addEventListener("click", this.clicarEditarPerfil())
     }
 
     static clicarExcluir(){
