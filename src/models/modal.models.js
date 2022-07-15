@@ -11,7 +11,7 @@ export default class Modal {
     }
 
     static clicarEditarHabito(){
-        const editarHabito = document.querySelector(".tarefa__opcoes--botao")
+        const editarHabito = document.getElementById("criarHabito")
         const modal = document.getElementById("modal__editarHabito")
         
         editarHabito.addEventListener("click", (evt)=>{
@@ -31,10 +31,10 @@ export default class Modal {
     }
 
     static clicarExcluir(){
-        const btnExcluir = document.getElementById("submit__excluirEdicao")
+        // const btnExcluir = document.getElementById("submit__excluirEdicao")
         
-        btnExcluir.addEventListener("click", (evt)=>{
-            // modal.style.display = "block"
-        })
+        // btnExcluir.addEventListener("click", (evt)=>{
+        //     // modal.style.display = "block"
+        // })
     }
 }

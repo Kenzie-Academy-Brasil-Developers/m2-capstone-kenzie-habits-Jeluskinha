@@ -31,22 +31,22 @@ formCriarHabito.addEventListener('submit', criarHabito)
 
 ////////
 
-const formEditarHabito = document.querySelector("#modal__form__editarHabito")
+// const formEditarHabito = document.querySelector("#modal__form__editarHabito")
 
-async function editarHabito(e){
-    e.preventDefault()
+// async function editarHabito(e){
+//     e.preventDefault()
     
-    const fData                =  new FormData(e.target)
-    const formDataObj          =  {}
-    fData.forEach((value, key) => (formDataObj[key] = value))
-    console.log(formDataObj);
+//     const fData                =  new FormData(e.target)
+//     const formDataObj          =  {}
+//     fData.forEach((value, key) => (formDataObj[key] = value))
+//     console.log(formDataObj);
 
-    const criarId = await criarHabito(e)
+//     const criarId = await criarHabito(e)
 
-    const editado = await Requests.updateHabit(formDataObj, criarId)
-    console.log(editado);
-}
-formEditarHabito.addEventListener('submit', editarHabito)
+//     const editado = await Requests.updateHabit(formDataObj, criarId)
+//     console.log(editado);
+// }
+// formEditarHabito.addEventListener('submit', editarHabito)
 
 ////////
 
@@ -78,7 +78,7 @@ const checkCumprido = document.querySelector(".tarefa__cumprido--check")
 async function check(e){
     e.preventDefault()
 
-    console.log(e.target.checked);
+    // console.log(e.target.checked);
     //e.target.id
 
 //    if(e.target.checked){
@@ -88,4 +88,4 @@ async function check(e){
 //    }
 
 }
-checkCumprido.addEventListener('change', check)
+// checkCumprido.addEventListener('change', check)
